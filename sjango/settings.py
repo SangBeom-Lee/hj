@@ -15,8 +15,14 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'template')
+
+# css & js
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+# file
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Quick-start development settings - unsuitable for production
@@ -32,6 +38,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+# 2022-06-01 게시판 추가
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -40,8 +47,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'layout.apps.LayoutConfig'
+    'layout.apps.LayoutConfig',
+    'board.apps.BoardConfig'
 ]
+
+# Summernote 필수 설정
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+INSTALLED_APPS  += ['django_summernote']
+SUMMERNOTE_CONFIG = {}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -110,6 +123,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
+#LANGUAGE_CODE = 'ko-kr'
 
 TIME_ZONE = 'Asia/Seoul'
 
