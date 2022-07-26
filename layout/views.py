@@ -30,3 +30,57 @@ class IntroView(ListView):
         context                         = super().get_context_data(**kwargs)
         return context
         
+
+# Vending (절곡)
+class VendingView(ListView):
+
+    template_name                       = 'subpage/vending.html'
+    context_object_name                 = 'data'
+
+    def get_queryset(self):
+        return ''
+
+    def get_context_data(self, **kwargs):
+        context                         = super().get_context_data(**kwargs)
+        return context
+
+
+# Laser (레이저)
+class LaserView(ListView):
+
+    template_name                       = 'subpage/laser.html'
+    context_object_name                 = 'data'
+
+    def get_queryset(self):
+        return ''
+
+    def get_context_data(self, **kwargs):
+        context                         = super().get_context_data(**kwargs)
+        return context
+
+
+# Bend (벤딩)
+class BendView(ListView):
+
+    template_name                       = 'subpage/bend.html'
+    context_object_name                 = 'data'
+
+    def get_queryset(self):
+        return ''
+
+    def get_context_data(self, **kwargs):
+        context                         = super().get_context_data(**kwargs)
+        return context
+        
+# Contact (오시는 길)
+class ContactView(ListView):
+
+    template_name                       = 'subpage/contact.html'
+    context_object_name                 = 'data'
+
+    def get_queryset(self):
+        return ''
+
+    def get_context_data(self, **kwargs):
+        context                         = super().get_context_data(**kwargs)
+        return context

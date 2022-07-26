@@ -7,6 +7,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),    
     path('', views.MainView.as_view()),
     path('intro/', views.IntroView.as_view()),
+    path('vending/', views.VendingView.as_view()),
+    path('laser/', views.LaserView.as_view()),
+    path('bend/', views.BendView.as_view()),
+    path('contact/', views.ContactView.as_view()),
     path('board/', include('board.urls'))
 ]
 
