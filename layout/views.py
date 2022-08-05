@@ -84,3 +84,16 @@ class ContactView(ListView):
     def get_context_data(self, **kwargs):
         context                         = super().get_context_data(**kwargs)
         return context
+
+
+##
+class EstimateView(ListView):
+    template_name                       = 'estimate/page/index.html'
+    context_object_name                 = 'data'
+
+    def get_queryset(self):
+        return ''
+
+    def get_context_data(self, **kwargs):
+        context                         = super().get_context_data(**kwargs)
+        return context

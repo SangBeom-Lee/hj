@@ -11,7 +11,10 @@ urlpatterns = [
     path('laser/', views.LaserView.as_view()),
     path('bend/', views.BendView.as_view()),
     path('contact/', views.ContactView.as_view()),
-    path('board/', include('board.urls'))
+    path('board/', include('board.urls')),
+
+    ## 견적사이트 미리보기
+    path('estimate/', views.EstimateView.as_view())
 ]
 
 # Summernote 설정

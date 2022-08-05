@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>견적 {% block title %}{% endblock %}</title>
+  </head>
+  <body>
+      <header class="header">
+          <ul>
+              <li>견적 리스트</li>
+              <li>업체 리스트</li>
+              <li>통계</li>
+          </ul>
+      </header>
+      <div class="wrap">
+          {% block content %}
+
+          {% endblock %}
+      </div>
+
+      <footer class="footer">
+          <div class="footer-wrap">
+              footer
+          </div>
+      </footer>
+  </body>
+</html>
