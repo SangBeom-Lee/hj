@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'layout.apps.LayoutConfig',
-    'board.apps.BoardConfig'
+    'board.apps.BoardConfig',
+    'contact.apps.ContactConfig'
 ]
 
 # Summernote 필수 설정
